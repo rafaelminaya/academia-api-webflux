@@ -20,5 +20,4 @@ public class RoleDocument {
     private String id;
     @Field
     private String name;
-
 }

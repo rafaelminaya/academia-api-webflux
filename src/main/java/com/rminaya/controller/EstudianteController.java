@@ -86,7 +86,7 @@ public class EstudianteController {
                     dto.setId(idEstudiante);
                     return dto;
                 })
-                .flatMap(dto -> estudianteService.update(idEstudiante, convertToDocument(estudianteDTO)))
+                .flatMap(dto -> estudianteService.update(idEstudiante, convertToDocument(dto)))
                 .map(this::convertToDTO)
                 .map(dto -> ResponseEntity
                         .ok()

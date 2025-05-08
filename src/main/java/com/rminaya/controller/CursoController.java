@@ -66,7 +66,7 @@ public class CursoController {
                     dto.setId(idCurso);
                     return dto;
                 })
-                .flatMap(e -> cursoService.update(idCurso, convertToDocument(cursoDTO)))
+                .flatMap(dto -> cursoService.update(idCurso, convertToDocument(dto)))
                 .map(this::convertToDTO)
                 .map(dto -> ResponseEntity
                         .ok()
